@@ -3,6 +3,8 @@ services:
  jenkins:
   container_name: jenkins
   #image: jenkins/jenkins:jdk11
+  env_file:
+    - .env
   build : ./jenkins
   ports:
     - '0.0.0.0:9090:8080' 
