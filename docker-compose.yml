@@ -2,7 +2,6 @@ version: '3.7'
 services:
  jenkins:
   container_name: jenkins-pipeline
-  #image: jenkins/jenkins:jdk11
   env_file:
     - .env
   build : ./jenkins
