@@ -29,11 +29,12 @@
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@4.13.0">
           <id>abd5b001-e8bf-4a59-82ef-2b11467895ef</id>
-          <remote>https://github.com/cochoaa/scriptPython.git</remote>
+          <remote>$GIT_REPO_SOURCE</remote>
           <credentialsId></credentialsId>
           <traits>
+            <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
             <jenkins.scm.impl.trait.WildcardSCMHeadFilterTrait plugin="scm-api@621.vda_a_b_055e58f7">
-              <includes>*</includes>
+              <includes>master main</includes>
               <excludes></excludes>
             </jenkins.scm.impl.trait.WildcardSCMHeadFilterTrait>
           </traits>
@@ -54,12 +55,15 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>https://github.com/cochoaa/ExternalJenkinsfile.git</url>
+          <url>$GIT_REPO_JENKINSFILE</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
           <name>*/main</name>
+        </hudson.plugins.git.BranchSpec>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/master</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -68,7 +72,7 @@
     </remoteJenkinsFileSCM>
     <matchBranches>false</matchBranches>
     <scmSourceBranchName>master</scmSourceBranchName>
-    <fallbackBranch>main</fallbackBranch>
+    <fallbackBranch>master</fallbackBranch>
     <lookupInParameters>false</lookupInParameters>
   </factory>
 </org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject>
