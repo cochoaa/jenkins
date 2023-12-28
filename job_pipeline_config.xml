@@ -5,11 +5,7 @@
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2151.ve32c9d209a_3f">
       <jobProperties/>
       <triggers/>
-      <parameters>
-        <string>fecha</string>
-        <string>subject</string>
-        <string>msgid</string>
-      </parameters>
+      <parameters/>
       <options/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
   </actions>
@@ -22,19 +18,38 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
-          <name>fecha</name>
-          <description>Fecha</description>
-          <trim>false</trim>
+          <name>area</name>
+          <description>area</description>
+          <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>msgid</name>
-          <description>Who should I say hello to?</description>
-          <trim>false</trim>
+          <name>nombre</name>
+          <description>nombre</description>
+          <trim>true</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>subject</name>
-          <description>Asunto</description>
+          <name>dependencia</name>
+          <description>dependencia</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>motivo</name>
+          <description>motivo</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>threadid</name>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.TextParameterDefinition>
+          <name>script</name>
+          <description>script sql</description>
           <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>sender</name>
+          <description>correo del solicitante</description>
+          <trim>true</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
